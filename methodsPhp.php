@@ -24,7 +24,7 @@
     echo("</br>");
     echo("</br>");
 
-    class Dev{
+    class Dev extends Coder{
     }
     class Coder{
     }
