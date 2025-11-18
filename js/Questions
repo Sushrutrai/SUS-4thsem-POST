@@ -1,0 +1,199 @@
+<!-- For Each Loop
+1. Array Transformation: Write a function that takes an array of numbers and uses
+the forEach loop to create a new array where each number is multiplied by 2.
+2. Finding Elements: Write a function that takes an array of numbers and a number n, and uses
+the forEach loop to find if n exists in the array.
+3. Counting Occurrences: Write a function that takes an array of strings and a string str, and uses
+the forEach loop to count the number of occurrences of str in the array.
+4. Object Properties Iteration: Write a function that takes an object and uses the forEach loop to
+log each property and its value.
+5. String Character Iteration: Write a function that takes a string and uses the forEach loop to log
+each character of the string.
+6. Array of Objects Iteration: Write a function that takes an array of objects, where each
+object has a name and age property, and uses the forEach loop to log each person’s name and age.
+Defining and Invoking Functions
+1. Greeting Function: Write a function named greet that takes a name as an argument and logs a
+greeting to the console. For example, greet("Alice") should log “Hello, Alice!”.
+
+Prepared by: Mr. Subash Siwa[Senior-java-developer-plug pig pvt.ltd sanogau]
+2. Addition Function: Write a function named add that takes two numbers as arguments and returns
+their sum. For example, add(2, 3) should return 5.
+3. Array Processing Function: Write a function named processArray that takes an array of
+numbers and a function as arguments. The function should apply the given function to each element in the
+array and return a new array with the results. For example, processArray([1, 2, 3, 4], function(n) { return
+n * n; }) should return [1, 4, 9, 16].
+4. Recursive Function: Write a recursive function to calculate the factorial of a number. The
+factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
+5. Higher-Order Function: Write a function named greaterThan that takes a number as an
+argument and returns a function that returns true if a given number is greater than the first number.
+6. Function Invocation: Write a function that takes a function and an argument, and returns a
+function that can supply a second argument.
+7. Anonymous Function: Write an anonymous function expression that stores a function in a
+variable and uses it to concatenate a string.
+Built-in Objects
+1. Date Object: Write a function that uses the Date object to return the current date and time in a
+human-readable format.
+2. Math Object: Write a function that uses the Math object to calculate the area of a circle given its
+radius.
+3. Array Object: Write a function that uses the Array object’s methods to remove duplicates from
+an array.
+4. String Object: Write a function that uses the String object’s methods to reverse a string.
+5. Number Object: Write a function that uses the Number object’s methods to format a number
+with two decimal places.
+6. JSON Object: Write a function that uses the JSON object to parse a JSON string and log the
+resulting object to the console.
+7. RegExp Object: Write a function that uses the RegExp object to validate an email address.
+8. Map Object: Write a function that uses the Map object to count the frequency of words in a
+string.
+9. Set Object: Write a function that uses the Set object to find the intersection of two arrays (i.e.,
+elements that appear in both arrays).
+Interacting With The Browser
+1. Changing Styles: Write a function that changes the color of the text in a paragraph when a button
+is clicked.
+2. Form Validation: Create a form and write a script that validates the input fields when the form is
+submitted.
+3. DOM Manipulation: Write a script that adds a new item to a list when a button is clicked.
+4. Event Handling: Write a script that logs a message to the console when a mouseover event
+occurs on an image.
+5. Window Object: Write a script that uses the window.location object to redirect the user to
+another webpage.
+6. Timer: Write a script that starts a timer and updates the text content of an element with the
+current time left every second.
+7. Local Storage: Write a script that stores a user’s name in local storage and retrieves it when the
+page is reloaded.
+8. AJAX Request: Write a script that fetches data from an API and displays it on the webpage.
+9. Error Handling: Write a script that handles errors when an image fails to load.
+
+Prepared by: Mr. Subash Siwa[Senior-java-developer-plug pig pvt.ltd sanogau]
+10. User Interaction: Write a script that changes the background color of the webpage based on the
+user’s keyboard input.
+Windows & Frames
+1. New Window: Write a function that opens a new browser window with a specified URL when a
+button is clicked.
+2. Window Size: Write a function that displays the width and height of the browser window in an
+alert box when a button is clicked.
+3. Frame Content: Write a script that changes the content of a frame when a button is clicked.
+4. Frame Communication: Create two frames in a webpage. Write a script in one frame that
+changes the content of the other frame when a button is clicked.
+5. Window Location: Write a function that displays the current URL of the window in an alert box
+when a button is clicked.
+6. Window Navigation: Write a function that navigates the browser to a new URL when a button is
+clicked.
+7. Frame Size: Write a script that changes the size of a frame when a button is clicked.
+8. Window Timer: Write a function that starts a timer and updates the text content of an element
+with the current time left every second.
+9. Window Alert: Write a function that displays an alert box with a specified message when a
+button is clicked.
+10. Frame Scrolling: Write a script that scrolls to a specific position in a frame when a button is
+clicked.
+Document Object Model
+1. Element Selection: Write a function that takes an element’s ID and returns the DOM object for
+that element.
+2. Element Creation: Write a function that creates a new div element, sets its id attribute, and
+appends it to the body of the document.
+3. Element Deletion: Write a function that takes an element’s ID and removes that element from
+the document.
+4. Attribute Modification: Write a function that takes an element’s ID and a color, and changes the
+element’s background color to the given color.
+5. Text Content: Write a function that takes an element’s ID and a string, and sets the element’s
+text content to the given string.
+6. Event Handling: Write a function that attaches a click event handler to a button. When the
+button is clicked, the background color of the page should change.
+7. Form Handling: Write a function that prevents a form from being submitted if a certain input
+field is empty.
+8. DOM Querying: Write a function that takes a tag name and returns an array of all elements in
+the document with that tag name.
+Event Handling
+1. Image Gallery Viewer
+o Create an image gallery where each thumbnail image can be clicked to display the full-size image.
+o Use event handlers to listen for click events on the thumbnail images.
+o When a thumbnail is clicked, prevent the default action and instead display the full-size image in a
+designated area of the page.
+2. Form Validation
+o Create a form with fields for username, email, and password.
+
+Prepared by: Mr. Subash Siwa[Senior-java-developer-plug pig pvt.ltd sanogau]
+
+o Use event handlers to validate the input in real-time as the user types into each field.
+o Display error messages next to the relevant field if the input is invalid.
+3. Dynamic List Filtering
+o Create a list of items and a search box.
+o As the user types into the search box, use an event handler to dynamically filter the list to
+only include items that match the search query.
+
+4. Drag and Drop Interface
+o Create an interface with draggable elements.
+o Use event handlers to update the position of the elements as they are dragged and dropped.
+Forms
+1. Form Submission and Validation
+o Create a form with fields for name, email, and password.
+o Use JavaScript to prevent the form from being submitted if any of the fields are empty or if the
+email is not in the correct format.
+o Display an error message next to the relevant field if the input is invalid.
+2. Dynamic Form Creation
+o Create a button that, when clicked, adds a new set of form fields to the page.
+o Each set of form fields should include a text input and a remove button.
+o The remove button should remove its associated set of form fields when clicked.
+Cookies
+1. User Session
+o Create a system that remembers a user’s name across multiple visits to your site.
+o When the user visits for the first time, prompt them for their name and store it in a cookie.
+o On subsequent visits, display a personalized greeting message using the name stored in the cookie.
+2. User Preferences
+o Create a system that allows users to customize the look and feel of your site.
+o When the user selects their preferences, store them in a cookie.
+o On subsequent visits, apply the user’s preferences by reading from the cookie.
+o Allow the user to update their preferences at any time, and reflect these changes in the cookie.
+o Provide an option for the user to reset their preferences, which deletes the cookie.
+ Write a JavaScript program to Create a Cookie.
+ Write a JavaScript program to Read a Cookie.
+ Write a JavaScript program to Change a Cookie.
+ Write a JavaScript program to Delete a Cookie.
+o
+Handling Regular Expression
+1. Email Validation
+Create a function that takes a string as input and uses a regular expression to validate if the string
+is a valid email address.
+2. Password Strength Checker
+
+Prepared by: Mr. Subash Siwa[Senior-java-developer-plug pig pvt.ltd sanogau]
+Create a function that checks the strength of a password. The password should have at least one
+uppercase letter, one lowercase letter, one digit, one special character, and be at least 8 characters
+long.
+3. URL Extractor
+Create a function that takes a string of text as input and returns an array of all URLs found within
+the text.
+4. Phone Number Formatter
+Create a function that takes a 10-digit phone number as input and formats it in the standard North
+American format (e.g., (123) 456-7890).
+Client Side Validations
+1. Form Validation
+o Create a registration form with fields for username, email, and password.
+o Use JavaScript to validate the form inputs on the client side before the form is submitted.
+o The username should be alphanumeric and at least 6 characters long.
+o The email should be in a valid email format.
+o The password should be at least 8 characters long and contain at least one uppercase letter, one lowercase
+letter, and one number.
+2. Input Limitations
+o Create a text input field that only accepts numeric input.
+o Use JavaScript to prevent non-numeric characters from being entered.
+3. Write a JavaScript program to create a form using following fields:
+a.user name b.password c.email d.address e.phone_number
+4. Create a HTML form with fields like username, password, email, country. The username
+should be textbox, password and email should be the password and email fields. The
+country should be drop down. Now write JavaScript function for form validation.Your
+function should validate the username to be of length 5, password should start with digit
+and should be alphanumeric. The email should be valid. The country field should be
+selected.
+5. Write HTML Script for creating a form containing text box for username, password field
+for password, and checkbox for Education fields. Write a JavaScript function for the
+validation of the form for all of the fields as required. In addition length of username
+should at least 4, the password should start with digit and end with $.
+6. Write a JavaScript program to use events such as clickevent(),mouseoverevent0,focusevent().
+7. Write a JavaScript program to show Event handler property.
+8. Write a JavaScript program to use of error handling mechanism using:
+a)try-catch-finally block
+b)try-throw-catch
+9. Write a JavaScript program to use of AJAX.
+10. Write a JavaScript program to use of JQUERY.
+11. Write a program to show jQuery Selectors. -->
