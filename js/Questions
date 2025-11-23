@@ -11,6 +11,8 @@ log each property and its value.
 each character of the string.
 6. Array of Objects Iteration: Write a function that takes an array of objects, where each
 object has a name and age property, and uses the forEach loop to log each person’s name and age.
+
+
 Defining and Invoking Functions
 1. Greeting Function: Write a function named greet that takes a name as an argument and logs a
 greeting to the console. For example, greet("Alice") should log “Hello, Alice!”.
@@ -30,6 +32,8 @@ argument and returns a function that returns true if a given number is greater t
 function that can supply a second argument.
 7. Anonymous Function: Write an anonymous function expression that stores a function in a
 variable and uses it to concatenate a string.
+
+
 Built-in Objects
 1. Date Object: Write a function that uses the Date object to return the current date and time in a
 human-readable format.
@@ -47,6 +51,8 @@ resulting object to the console.
 string.
 9. Set Object: Write a function that uses the Set object to find the intersection of two arrays (i.e.,
 elements that appear in both arrays).
+
+
 Interacting With The Browser
 1. Changing Styles: Write a function that changes the color of the text in a paragraph when a button
 is clicked.
@@ -67,6 +73,8 @@ page is reloaded.
 Prepared by: Mr. Subash Siwa[Senior-java-developer-plug pig pvt.ltd sanogau]
 10. User Interaction: Write a script that changes the background color of the webpage based on the
 user’s keyboard input.
+
+
 Windows & Frames
 1. New Window: Write a function that opens a new browser window with a specified URL when a
 button is clicked.
@@ -86,6 +94,8 @@ with the current time left every second.
 button is clicked.
 10. Frame Scrolling: Write a script that scrolls to a specific position in a frame when a button is
 clicked.
+
+
 Document Object Model
 1. Element Selection: Write a function that takes an element’s ID and returns the DOM object for
 that element.
@@ -103,6 +113,8 @@ button is clicked, the background color of the page should change.
 field is empty.
 8. DOM Querying: Write a function that takes a tag name and returns an array of all elements in
 the document with that tag name.
+
+
 Event Handling
 1. Image Gallery Viewer
 o Create an image gallery where each thumbnail image can be clicked to display the full-size image.
@@ -124,6 +136,8 @@ only include items that match the search query.
 4. Drag and Drop Interface
 o Create an interface with draggable elements.
 o Use event handlers to update the position of the elements as they are dragged and dropped.
+
+
 Forms
 1. Form Submission and Validation
 o Create a form with fields for name, email, and password.
@@ -134,6 +148,8 @@ o Display an error message next to the relevant field if the input is invalid.
 o Create a button that, when clicked, adds a new set of form fields to the page.
 o Each set of form fields should include a text input and a remove button.
 o The remove button should remove its associated set of form fields when clicked.
+
+
 Cookies
 1. User Session
 o Create a system that remembers a user’s name across multiple visits to your site.
@@ -150,6 +166,8 @@ o Provide an option for the user to reset their preferences, which deletes the c
  Write a JavaScript program to Change a Cookie.
  Write a JavaScript program to Delete a Cookie.
 o
+
+
 Handling Regular Expression
 1. Email Validation
 Create a function that takes a string as input and uses a regular expression to validate if the string
@@ -166,6 +184,8 @@ the text.
 4. Phone Number Formatter
 Create a function that takes a 10-digit phone number as input and formats it in the standard North
 American format (e.g., (123) 456-7890).
+
+
 Client Side Validations
 1. Form Validation
 o Create a registration form with fields for username, email, and password.
