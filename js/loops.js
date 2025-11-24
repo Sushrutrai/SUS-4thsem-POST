@@ -61,6 +61,12 @@ function stringToChar(string){
 }
 console.log(stringToChar('hello'))
 
+//
+function str2char(str){
+    return str.split('')
+}
+console.log(str2char('ola'))
+
 // 6. Array of Objects Iteration: Write a function that takes an array of objects, where each
 // object has a name and age property, and uses the forEach loop to log each person’s name and age.
 function arrayObjectProperties(arr){
