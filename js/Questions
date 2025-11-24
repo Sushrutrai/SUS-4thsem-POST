@@ -16,8 +16,6 @@ object has a name and age property, and uses the forEach loop to log each person
 Defining and Invoking Functions
 1. Greeting Function: Write a function named greet that takes a name as an argument and logs a
 greeting to the console. For example, greet("Alice") should log “Hello, Alice!”.
-
-Prepared by: Mr. Subash Siwa[Senior-java-developer-plug pig pvt.ltd sanogau]
 2. Addition Function: Write a function named add that takes two numbers as arguments and returns
 their sum. For example, add(2, 3) should return 5.
 3. Array Processing Function: Write a function named processArray that takes an array of
@@ -69,8 +67,6 @@ current time left every second.
 page is reloaded.
 8. AJAX Request: Write a script that fetches data from an API and displays it on the webpage.
 9. Error Handling: Write a script that handles errors when an image fails to load.
-
-Prepared by: Mr. Subash Siwa[Senior-java-developer-plug pig pvt.ltd sanogau]
 10. User Interaction: Write a script that changes the background color of the webpage based on the
 user’s keyboard input.
 
@@ -124,8 +120,6 @@ designated area of the page.
 2. Form Validation
 o Create a form with fields for username, email, and password.
 
-Prepared by: Mr. Subash Siwa[Senior-java-developer-plug pig pvt.ltd sanogau]
-
 o Use event handlers to validate the input in real-time as the user types into each field.
 o Display error messages next to the relevant field if the input is invalid.
 3. Dynamic List Filtering
@@ -173,8 +167,6 @@ Handling Regular Expression
 Create a function that takes a string as input and uses a regular expression to validate if the string
 is a valid email address.
 2. Password Strength Checker
-
-Prepared by: Mr. Subash Siwa[Senior-java-developer-plug pig pvt.ltd sanogau]
 Create a function that checks the strength of a password. The password should have at least one
 uppercase letter, one lowercase letter, one digit, one special character, and be at least 8 characters
 long.
