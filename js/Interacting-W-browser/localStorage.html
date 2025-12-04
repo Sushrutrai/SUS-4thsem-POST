@@ -1,0 +1,44 @@
+ <!-- 7. Local Storage: Write a script that stores a user’s name in local storage and retrieves it when the
+page is reloaded. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex;justify-content: center;">
+   <div>
+     <label for="">Enter name:<input type="text" id="name"></label><button type="button" id="reg">register</button>
+    <p id="name_list"></p>
+   </div>
+<script>
+    let user=document.getElementById('name')
+    
+    // let data=localStorage.getItem("name")
+
+   function render(){
+    
+
+    document.getElementById('name_list').textContent=localStorage.getItem("name")
+        
+   document.getElementById('name_list').textContent=localStorage.getItem("name")
+
+   }
+   
+
+    
+    document.getElementById('reg').addEventListener('click',()=>{
+        
+        localStorage.setItem("name",user.value)
+
+        
+
+        document.getElementById('name_list').textContent="name stored to localstorage"
+        
+        console.log(localStorage.getItem("name"))
+    })
+    render()
+</script>
+</body>
+</html>

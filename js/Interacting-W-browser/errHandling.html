@@ -1,0 +1,23 @@
+<!-- 9. Error Handling: Write a script that handles errors when an image fails to load. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex;justify-content: center;">
+    <div>
+        <img src="https://previews.123rf.com/images/suchatbky/suchatbky1808/suchatbky180800061/110598624-beautiful-conure-brid-on-hat.jp" alt="bird" id="image" style="width: 200px;">
+    </div>
+<script>
+    const image=document.getElementById('image')
+    image.onerror=function(){
+        console.error("Failed to load the image")
+        this.src="https://previews.123rf.com/images/suchatbky/suchatbky1808/suchatbky180800061/110598624-beautiful-conure-brid-on-hat.jpg"
+        // this.onerror=null
+        this.style="width:100px";
+    }
+</script>
+</body>
+</html>

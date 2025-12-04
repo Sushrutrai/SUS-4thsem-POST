@@ -1,0 +1,38 @@
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para"style="display: flex;justify-content: center;"></p>
+<Script>
+    //1. Element Selection: Write a function that takes an element’s ID and returns the DOM object for
+    // that element.
+    
+    function getId(id){
+       return document.getElementById(id)
+    }
+    getId('para').textContent="This is JS"
+    
+    // 2. Element Creation: Write a function that creates a new div element, sets its id attribute, and
+    // appends it to the body of the document. 
+
+    function createDiv(){
+        const div=document.createElement('div')
+        div.id="box"
+        div.textContent='this is a div'
+        document.body.appendChild(div)
+   }
+   createDiv()
+    //3. Element Deletion: Write a function that takes an element’s ID and removes that element from
+    // the document.
+
+   function deleteEl(id){
+    
+   }
+</Script>
+</body>
+</html>

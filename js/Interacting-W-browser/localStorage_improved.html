@@ -1,0 +1,81 @@
+<!-- 7. Local Storage: Store multiple user names in local storage and retrieve on reload
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage - Improved</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 1rem; }
+        label, button { margin-right: .5rem; }
+        #name_list { margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <label>Enter name: <input type="text" id="name" placeholder="Your name"></label>
+    <button type="button" id="reg">Register</button>
+    <button type="button" id="clear">Clear All</button>
+
+    <ul id="name_list"></ul>
+
+<script>
+    const input = document.getElementById('name');
+    const regBtn = document.getElementById('reg');
+    const clearBtn = document.getElementById('clear');
+    const list = document.getElementById('name_list');
+
+    function getNames() {
+        const raw = localStorage.getItem('names');
+        return raw ? JSON.parse(raw) : [];
+    }
+
+    function saveNames(names) {
+        localStorage.setItem('names', JSON.stringify(names));
+    }
+
+    function render() {
+        list.innerHTML = '';
+        const names = getNames();
+        if (names.length === 0) {
+            const hint = document.createElement('li');
+            hint.textContent = 'No names saved yet.';
+            hint.style.fontStyle = 'italic';
+            list.appendChild(hint);
+            return;
+        }
+        names.forEach((name, idx) => {
+            const li = document.createElement('li');
+            li.textContent = name;
+            list.appendChild(li);
+        });
+    }
+
+    regBtn.addEventListener('click', () => {
+        const value = input.value.trim();
+        if (!value) {
+            alert('Please enter a name before registering.');
+            input.focus();
+            return;
+        }
+        const names = getNames();
+        names.push(value);
+        saveNames(names);
+        render();
+        input.value = '';
+        input.focus();
+        console.log('Saved names:', getNames());
+    });
+
+    clearBtn.addEventListener('click', () => {
+        if (!confirm('Clear all saved names?')) return;
+        localStorage.removeItem('names');
+        render();
+    });
+
+    // Initial render
+    render();
+</script>
+</body>
+</html> -->
+
+This is AI slop

@@ -1,0 +1,18 @@
+
+Document Object Model
+1. Element Selection: Write a function that takes an element’s ID and returns the DOM object for
+that element.
+2. Element Creation: Write a function that creates a new div element, sets its id attribute, and
+appends it to the body of the document.
+3. Element Deletion: Write a function that takes an element’s ID and removes that element from
+the document.
+4. Attribute Modification: Write a function that takes an element’s ID and a color, and changes the
+element’s background color to the given color.
+5. Text Content: Write a function that takes an element’s ID and a string, and sets the element’s
+text content to the given string.
+6. Event Handling: Write a function that attaches a click event handler to a button. When the
+button is clicked, the background color of the page should change.
+7. Form Handling: Write a function that prevents a form from being submitted if a certain input
+field is empty.
+8. DOM Querying: Write a function that takes a tag name and returns an array of all elements in
+the document with that tag name.

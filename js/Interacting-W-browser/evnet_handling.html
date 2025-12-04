@@ -1,0 +1,18 @@
+<!-- 4. Event Handling: Write a script that logs a message to the console when a mouseover event
+occurs on an image. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex;justify-content: center;">
+    <img id="image"style="width:150px;"src="https://plus.unsplash.com/premium_photo-1694819488591-a43907d1c5cc?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y3V0ZSUyMGRvZ3xlbnwwfHwwfHx8MA%3D%3D" alt="dog">
+</body>
+<script>
+    document.getElementById('image').addEventListener('mouseover',()=>{
+        console.log("Good Boy!")
+    })
+</script>
+</html>

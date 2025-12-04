@@ -1,0 +1,35 @@
+<!-- 10. User Interaction: Write a script that changes the background color of the webpage based on the
+user’s keyboard input. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex;justify-content: center;height: 100vh;width: 100vw;margin: 0;"id="body">
+    <div style="width: 100px;text-align: center;">Press R</div>
+    <div style="width: 100px;text-align: center;">Press G</div>
+    <div style="width: 100px;text-align: center;">Press B</div>
+<script>
+    const container=document.getElementById('body')
+
+    document.addEventListener('keydown',(event)=>{
+        const key=event.key
+
+        if(key==='r'){
+            container.style.backgroundColor='red';
+        }
+        if(key==='g'){
+            container.style.backgroundColor='green';
+        }
+        if(key==='b'){
+            container.style.backgroundColor='blue';
+        }
+        if(key===' '){
+            container.style.backgroundColor='white';
+        }
+    })  
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!-- // Interacting With The Browser
+// 1. Changing Styles: Write a function that changes the color of the text in a paragraph when a button
+// is clicked. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="para">This is example text.</p>
+    <button id="button"onclick="changeColor(para,'green')">Change</button>
+</body>
+<script>
+    function changeColor(element,colors){
+        element.style.color=colors;
+    }
+</script>
+</html>

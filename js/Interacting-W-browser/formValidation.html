@@ -1,0 +1,62 @@
+<!-- 2. Form Validation: Create a form and write a script that validates the input fields when the form is
+submitted. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        label{
+            margin: 1rem;
+            display: block;
+        }
+        form{
+            position: relative;
+        }
+        button{
+            position: absolute;
+            right: 50%;
+        }
+    </style>
+</head>
+<body>
+    <form action=""method="post"onsubmit="return validate()">
+        <span id="msg"style="border:1px solid black;display:none;"></span>
+        <label for="name"><sup style="color: red;">*</sup>Name:<input type="text" id="name"name="name" required></label>
+        
+        <label for="email"><sup style="color: red;">*</sup>Email:<input type="email" id="email"name="email" required></label>
+       
+        <label for="pass"><sup style="color: red;">*</sup>Password:<input type="password"id="pass"name="pass" required></label>
+       
+        <button type="submit">submit</button>
+    </form>
+</body>
+<script>
+    function validate(){
+       
+        let msg=document.getElementById('msg')
+        let Pass=document.getElementById('pass')
+        let Name=document.getElementById('name')
+        const valid = /^[A-Za-z]+$/.test(Name.value);
+        msg.style.display = "block";
+        let errors = [];
+        if (!valid) {
+            errors.push("-Name should only be alphabetical");
+        }
+        if(Pass.value.length<4){
+            errors.push("-password not secure");
+        }
+        if(errors.length > 0){
+            msg.innerHTML = errors.join("<br>");
+            return false;
+        }
+        msg.innerHTML="Form submitted successfully";
+        return true;
+    }
+</script>
+</html>

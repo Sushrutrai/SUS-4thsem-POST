@@ -1,0 +1,68 @@
+<!-- 6. Timer: Write a script that starts a timer and updates the text content of an element with the
+current time left every second. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body  style="display: flex;justify-content: center;">
+    <div>
+        <label>set timer for <input type="number" id="time" ></input></label>
+    <p id="timer">00</p>
+    <button id="start">start timer</button>
+    </div>
+    <!-- <script>
+    let timer=document.getElementById('time')
+    let start=document.getElementById('start')
+    let timeInput=document.getElementById('time')
+
+   
+
+   let interval
+
+   start.addEventListener('click',()=>{
+    let timeleft=Number(timeInput.value)
+   timer.textContent=timeleft
+
+        interval=setInterval(()=>{
+        timeleft--
+        timer.textContent=timeleft
+        if(timeleft<=0){
+            clearInterval(interval)
+            timer.innerContent="0"
+        }
+        
+    },1000)
+   })
+</script> -->
+<script>
+let timer = document.getElementById("timer");
+let start = document.getElementById("start");
+let time = document.getElementById("time");
+
+let interval;
+
+start.addEventListener("click", () => {
+
+  let timeleft = Number(time.value);
+  timer.textContent = timeleft;
+
+  interval = setInterval(() => {
+
+    timeleft--;
+    timer.textContent = timeleft;
+
+    if (timeleft <= 0) {
+      clearInterval(interval);
+      timer.textContent = "0";
+    }
+
+  }, 1000);
+
+});
+</script>
+</body>
+
+</html>
