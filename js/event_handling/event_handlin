@@ -1,0 +1,17 @@
+Event Handling
+1. Image Gallery Viewer
+o Create an image gallery where each thumbnail image can be clicked to display the full-size image.
+o Use event handlers to listen for click events on the thumbnail images.
+o When a thumbnail is clicked, prevent the default action and instead display the full-size image in a
+designated area of the page.
+2. Form Validation
+o Create a form with fields for username, email, and password.
+o Use event handlers to validate the input in real-time as the user types into each field.
+o Display error messages next to the relevant field if the input is invalid.
+3. Dynamic List Filtering
+o Create a list of items and a search box.
+o As the user types into the search box, use an event handler to dynamically filter the list to
+only include items that match the search query.
+4. Drag and Drop Interface
+o Create an interface with draggable elements.
+o Use event handlers to update the position of the elements as they are dragged and dropped.

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #red{
+        background-color: red;
+        aspect-ratio: 1/1;
+        width: 200px; 
+        position: absolute;
+    }
+    #blue{
+        background-color: blue;
+        aspect-ratio: 1/1;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+    }
+</style>
+<body>
+    <!-- 4. Drag and Drop Interface
+o Create an interface with draggable elements.
+o Use event handlers to update the position of the elements as they are dragged and dropped. -->
+    <div id="blue">
+        <div id="red" draggable="true"></div>
+    </div>
+    <script>
+        const element=document.getElementById('red')
+
+        element.addEventListener('dragend',(e)=>{   
+            element.style.left=`${e.pageX}px`
+            element.style.top=`${e.pageY}px`
+        })
+    </script>
+</body>
+</html>

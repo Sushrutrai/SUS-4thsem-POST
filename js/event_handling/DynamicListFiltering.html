@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        label{
+            padding: 0;
+            margin: 0;
+        }
+        svg{
+            position: relative;
+            top: 7px;
+
+        }
+        ul li{
+            list-style:decimal;
+        }
+        #item-list{
+            width: 40vw;
+            position: relative;
+        }
+        #msg{
+            position: relative;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 3. Dynamic List Filtering
+o Create a list of items and a search box.
+o As the user types into the search box, use an event handler to dynamically filter the list to
+only include items that match the search query. -->
+    <label for="">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.843 16.368C13.2232 17.5999 11.1948 18.1681 9.17074 17.9571C7.1467 17.7461 5.27915 16.7716 3.94828 15.2321C2.61741 13.6926 1.92326 11.7038 2.00714 9.6705C2.09102 7.63722 2.94662 5.71232 4.39977 4.28766C5.85292 2.86301 7.79438 2.04569 9.82893 2.00208C11.8635 1.95848 13.8382 2.69187 15.351 4.05296C16.8639 5.41405 17.8012 7.30053 17.9721 9.32835C18.143 11.3562 17.5347 13.3729 16.271 14.968L20.698 19.284C20.7938 19.3753 20.8706 19.4846 20.9239 19.6057C20.9771 19.7269 21.0058 19.8574 21.0083 19.9896C21.0108 20.1219 20.9869 20.2534 20.9382 20.3764C20.8895 20.4995 20.8169 20.6116 20.7245 20.7063C20.6322 20.8011 20.5219 20.8766 20.4002 20.9284C20.2784 20.9802 20.1476 21.0074 20.0153 21.0083C19.883 21.0092 19.7518 20.9838 19.6293 20.9336C19.5069 20.8835 19.3956 20.8095 19.302 20.716L14.843 16.368ZM16 10C16 8.40873 15.3679 6.88261 14.2426 5.75739C13.1174 4.63217 11.5913 4.00003 10 4.00003C8.4087 4.00003 6.88257 4.63217 5.75735 5.75739C4.63214 6.88261 4 8.40873 4 10C4 11.5913 4.63214 13.1175 5.75735 14.2427C6.88257 15.3679 8.4087 16 10 16C11.5913 16 13.1174 15.3679 14.2426 14.2427C15.3679 13.1175 16 11.5913 16 10Z" fill="black"/>
+        </svg>
+    <input type="text" id="searchbox"/></label>
+   
+    <div id="item-list">
+        <ol>
+            <li class="items" >apple</li>
+            <li class="items">appricot</li>
+            <li class="items">ball</li>
+            <li class="items">ballpit</li>
+            <li class="items">zebra</li>
+            <li class="items">sun</li>
+            <li class="items">leaf</li>
+            <li class="items">tea</li>
+            <li class="items">star</li>
+            <li class="items">stack</li>
+            <li class="items">code</li>
+            <li class="items">coffee</li>
+            <li class="items">keyboard</li>
+            <li class="items">mouse</li>
+            <li class="items">monitor</li>
+            <li class="items">phone</li>
+            <li class="items">notebook</li>
+        </ol>
+        <p id="msg"></p>
+    </div>
+    <script>
+        function parseInput(input){
+            return input.toLowerCase().trim()
+        }
+        
+        const list=document.querySelectorAll('.items')
+        const search=document.getElementById('searchbox')
+        
+            search.addEventListener('input',()=>{
+                let matchFound=0
+                if(search.value.length>=1){
+                  
+                    let parsedres=parseInput(search.value)
+                
+                    list.forEach(items=>{
+                        let item=parseInput(items.textContent)
+                        if(!item.includes(parsedres)){
+                           
+                            items.style.display='none'  
+                               
+                        }
+                        else{
+                            console.log(item)
+                            items.style.display='list-item'
+                            matchFound++
+                        }
+                    })
+                    if(matchFound==0){
+                        document.getElementById('msg').textContent='No match found'
+                    }
+                    else{
+                        document.getElementById('msg').textContent=`${matchFound} match(es) found`
+                    }
+                } 
+                else if(search.value.length==0){
+                    list.forEach(items=>{
+                        items.style.display='list-item'
+                        document.getElementById('msg').textContent=''
+                    })
+                }
+                console.log(matchFound)
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        .gallery{
+            border: 2px solid rgb(82, 80, 80);
+            padding: 1rem 2rem;
+        }
+        .gallery a{
+            padding:0 1rem;
+        }
+        .thumbnail{
+            width: 100px;
+            aspect-ratio: 1/1;
+        }
+        .preview{
+            display: none;
+            width: 700px;
+            aspect-ratio:1/1;
+        }
+        .preview.active{
+            display: block;
+        }
+        .thumbnail.active{
+            border: 2px soild red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1. Image Gallery Viewer
+o Create an image gallery where each thumbnail image can be clicked to display the full-size image.
+o Use event handlers to listen for click events on the thumbnail images.
+o When a thumbnail is clicked, prevent the default action and instead display the full-size image in a
+designated area of the page. -->
+    <h1>Gallery</h1>
+    <div class="gallery">
+        <a href="C:\GitHub-C\BookIt\Images\Albatross.jpg"><img class='thumbnail'src="C:\GitHub-C\BookIt\Images\Albatross.jpg" alt=""></a>
+        <a href="C:\GitHub-C\BookIt\Images\nepathya.jpg"><img class='thumbnail'src="C:\GitHub-C\BookIt\Images\nepathya.jpg" alt=""></a>
+        <a href="C:\GitHub-C\BookIt\Images\Hero_Image_Temp3.jpg"><img class='thumbnail'src="C:\GitHub-C\BookIt\Images\Hero_Image_Temp3.jpg" alt=""></a>
+    </div>
+    <div class="image">
+        <img class="preview" alt="">
+    </div>
+    <script>
+        const thumbnails = document.querySelectorAll('.gallery a');
+        const preview = document.querySelector('.preview');
+
+        let activeImg=null;                                     //this is var to store image
+        thumbnails.forEach(link => {    
+            link.addEventListener('click', function(event){  
+                event.preventDefault()                          //to prevent default behaviour of an element
+
+                const img=this.querySelector('.thumbnail')      //the clicked thumbnail
+
+                if(activeImg===img){                            //This is to toggle the preview if active 
+                    img.classList.remove('active')              //TRUE the 'active' class is removed and the 
+                    preview.classList.remove('active')          //activeImg is set back to null and the .preview 
+                    preview.src=''                              //src is set to '' and returns outside the function
+                    activeImg=null
+                    return
+                }
+                if(activeImg){                                  //if the image is in active state remove .active
+                    activeImg.classList.remove('active')
+                }
+
+                img.classList.add('active')                     //else when clicked add .active to the elements and 
+                preview.src=link.href;                          //set the preview src and set the activeImg to the 
+                preview.classList.add('active')                 //current Thumbnail
+                activeImg=img
+
+            });
+        });
+    </script>
+</body>
+</html>

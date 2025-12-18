@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex;justify-content: center;">
+    <!-- 2. Form Validation
+o Create a form with fields for username, email, and password.
+o Use event handlers to validate the input in real-time as the user types into each field.
+o Display error messages next to the relevant field if the input is invalid. -->
+    <form action=""method='post' style="display: flex;flex-direction: column;">
+        <label for="">username:<input type="text"id='username'class='form_fields'></label><span class="err_msg"id='user_err'></span>
+        <label for="">email:<input type="email"id='email'class='form_fields'></label><span class="err_msg"id='email_err'></span>
+        <label for="">password:<input type="password"id='password'class='form_fields'></label><span class="err_msg"id='pass_err'></span>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const fields=document.querySelectorAll('.form_fields')
+        const err=document.querySelector('.err')
+
+        const patterns={
+           username:/^\w+$/,
+           email:/^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+           password:/^.{6,}$/
+        }
+        const err_msg={
+            username:'must be alphanumeric',
+            email:'email format is incorrect',
+            password:'password length must be at least 6 characters'
+        } 
+        const errorElements = {
+            username: document.getElementById('user_err'),
+            email: document.getElementById('email_err'),
+            password: document.getElementById('pass_err')
+        }
+
+        fields.forEach(field=>{
+            field.addEventListener('keyup',()=>{
+                const pattern=patterns[field.id]
+                const msg=err_msg[field.id]
+                const value=field.value.trim()
+
+                    if(value===''){
+                        errorElements[field.id].textContent=''
+                        field.style.border="3px solid red"
+                    }                   
+                    else if(!pattern.test(value) ){
+                        errorElements[field.id].textContent=msg
+                        field.style.border="3px solid red"
+                    }
+                   
+                    else {
+                        errorElements[field.id].textContent=''
+                        field.style.border="3px solid green"
+                    }
+                })
+            })
+    </script>
+</body>
+</html>

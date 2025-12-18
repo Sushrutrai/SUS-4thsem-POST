@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="display: flex;justify-content: center;">
+    <div style="">
+        <p id="del">delete me</p>
     <p id="para"style="display: flex;justify-content: center;"></p>
-<Script>
+    <button type="button" id="btn">Change background color</button>
+    </div>
+<Script> 
     //1. Element Selection: Write a function that takes an element’s ID and returns the DOM object for
     // that element.
     
@@ -23,16 +27,45 @@
     function createDiv(){
         const div=document.createElement('div')
         div.id="box"
-        div.textContent='this is a div'
+
         document.body.appendChild(div)
    }
-   createDiv()
+    createDiv()
     //3. Element Deletion: Write a function that takes an element’s ID and removes that element from
     // the document.
 
-   function deleteEl(id){
-    
-   }
+    function deleteElementById(id){
+        document.getElementById(id).remove()
+    }
+    deleteElementById('del')
+    //4. Attribute Modification: Write a function that takes an element’s ID and a color, and changes the
+    // element’s background color to the given color.
+
+    function changeBgColor(id,color){
+        document.getElementById(id).style.backgroundColor=color;
+    }
+    changeBgColor('box','grey')
+
+    //5. Text Content: Write a function that takes an element’s ID and a string, and sets the element’s
+    // text content to the given string.
+
+    function setContentById(id,str){
+        document.getElementById(id).textContent=str
+    }
+    setContentById('box','text from function')
+
+    // 6. Event Handling: Write a function that attaches a click event handler to a button. When the
+    // button is clicked, the background color of the page should change.
+
+    function changeBgOnClick(id,color){  
+        let active=false
+        document.getElementById(id).addEventListener('click',()=>{
+            document.body.style.backgroundColor = active ? 'white' : color;
+            active=!active
+        })
+        
+    }
+    changeBgOnClick('btn','red')    
 </Script>
 </body>
 </html>

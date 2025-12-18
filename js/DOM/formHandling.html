@@ -1,0 +1,29 @@
+<!-- 7. Form Handling: Write a function that prevents a form from being submitted if a certain input
+field is empty. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex;justify-content: center;">
+    <form action="" method="post" onsubmit="return validate()"style='display:flex;flex-direction:column;'>
+        <label for="name">Name:<input type="text" id="name" name="name"></label>
+        <label for="email"><sup style="color: red;">*</sup>Email:<input type="email" name="email" id="email"></label><span id="err"></span>
+        <button type="submit"id='button'>Submit</button>
+    </form>
+    <script> 
+        function validate(){
+            const email=document.getElementById('email').value.trim()
+            const msg=document.getElementById('err')
+            if(email==''){
+                msg.innerText='email is mandatory'
+                return false
+            }
+            return true
+        }
+        
+    </script>
+</body>
+</html> 
