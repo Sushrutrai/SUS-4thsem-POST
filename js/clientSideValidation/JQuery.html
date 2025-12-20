@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 10. Write a JavaScript program to use of JQUERY.
+    11. Write a program to show jQuery Selectors. -->
+    <a href="https://learn.jquery.com/about-jquery/how-jquery-works/">link</a>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("a").click(function(e) {
+                e.preventDefault(); 
+                $(this).hide('slow')
+                alert   ('Thanks for visit');
+            });
+        });
+    </script>
+</body>
+</html>

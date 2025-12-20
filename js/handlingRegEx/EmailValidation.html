@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. Email Validation
+Create a function that takes a string as input and uses a regular expression to validate if the string
+is a valid email address. -->
+    <script>
+        function validateEmail(string){
+            let emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            if(emailPattern.test(string))return string+' is a valid email';
+            else return string+' is not a valid email'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+
+Forms
+1. Form Submission and Validation
+o Create a form with fields for name, email, and password.
+o Use JavaScript to prevent the form from being submitted if any of the fields are empty or if the
+email is not in the correct format.
+o Display an error message next to the relevant field if the input is invalid.
+2. Dynamic Form Creation
+o Create a button that, when clicked, adds a new set of form fields to the page.
+o Each set of form fields should include a text input and a remove button.
+o The remove button should remove its associated set of form fields when clicked.

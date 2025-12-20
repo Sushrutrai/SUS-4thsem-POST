@@ -1,0 +1,16 @@
+Cookies
+1. User Session
+o Create a system that remembers a user’s name across multiple visits to your site.
+o When the user visits for the first time, prompt them for their name and store it in a cookie.
+o On subsequent visits, display a personalized greeting message using the name stored in the cookie.
+2. User Preferences
+o Create a system that allows users to customize the look and feel of your site.
+o When the user selects their preferences, store them in a cookie.
+o On subsequent visits, apply the user’s preferences by reading from the cookie.
+o Allow the user to update their preferences at any time, and reflect these changes in the cookie.
+o Provide an option for the user to reset their preferences, which deletes the cookie.
+ Write a JavaScript program to Create a Cookie.
+ Write a JavaScript program to Read a Cookie.
+ Write a JavaScript program to Change a Cookie.
+ Write a JavaScript program to Delete a Cookie.
+o

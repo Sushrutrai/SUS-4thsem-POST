@@ -1,0 +1,14 @@
+Handling Regular Expression
+1. Email Validation
+Create a function that takes a string as input and uses a regular expression to validate if the string
+is a valid email address.
+2. Password Strength Checker
+Create a function that checks the strength of a password. The password should have at least one
+uppercase letter, one lowercase letter, one digit, one special character, and be at least 8 characters
+long.
+3. URL Extractor
+Create a function that takes a string of text as input and returns an array of all URLs found within
+the text.
+4. Phone Number Formatter
+Create a function that takes a 10-digit phone number as input and formats it in the standard North
+American format (e.g., (123) 456-7890).

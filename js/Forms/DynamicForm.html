@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        div{
+            padding: .5rem  ;
+            display: flex;
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 2. Dynamic Form Creation
+o Create a button that, when clicked, adds a new set of form fields to the page.
+o Each set of form fields should include a text input and a remove button.
+o The remove button should remove its associated set of form fields when clicked. -->
+ <p>Add a new element   <button type="button" id="add_button" onclick="return addField()">Add</button></p>
+    <form action="" id="form" class="form">
+    </form>
+    <script>
+        const form=document.getElementById('form')
+        let count=0
+
+        function removeField(fieldId){
+            const field=document.getElementById(fieldId)   
+            if(field){
+                form.removeChild(field)
+            }
+        }
+
+        function addField(){
+             count++
+            let div=document.createElement('div')
+            // div.id=`field${count}`
+            // let id=div.id;
+                 
+            let input=document.createElement('input')
+            
+            let button=document.createElement('button')
+          
+            // button.onclick=() => removeField(id)
+            button.onclick=function(){
+                this.parentElement.remove()  
+            }
+            button.innerHTML='Remove'
+            button.type='button'
+            
+            div.appendChild(input)
+            div.appendChild(button)
+            form.appendChild(div)
+            console.log(count)
+        }
+    </script>
+</body>
+</html>

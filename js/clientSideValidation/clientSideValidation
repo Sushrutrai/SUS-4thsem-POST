@@ -1,0 +1,31 @@
+Client Side Validations
+1. Form Validation
+o Create a registration form with fields for username, email, and password.
+o Use JavaScript to validate the form inputs on the client side before the form is submitted.
+o The username should be alphanumeric and at least 6 characters long.
+o The email should be in a valid email format.
+o The password should be at least 8 characters long and contain at least one uppercase letter, one lowercase
+letter, and one number.
+2. Input Limitations
+o Create a text input field that only accepts numeric input.
+o Use JavaScript to prevent non-numeric characters from being entered.
+3. Write a JavaScript program to create a form using following fields:
+a.user name b.password c.email d.address e.phone_number
+4. Create a HTML form with fields like username, password, email, country. The username
+should be textbox, password and email should be the password and email fields. The
+country should be drop down. Now write JavaScript function for form validation.Your
+function should validate the username to be of length 5, password should start with digit
+and should be alphanumeric. The email should be valid. The country field should be
+selected.
+5. Write HTML Script for creating a form containing text box for username, password field
+for password, and checkbox for Education fields. Write a JavaScript function for the
+validation of the form for all of the fields as required. In addition length of username
+should at least 4, the password should start with digit and end with $.
+6. Write a JavaScript program to use events such as clickevent(),mouseoverevent0,focusevent().
+7. Write a JavaScript program to show Event handler property.
+8. Write a JavaScript program to use of error handling mechanism using:
+a)try-catch-finally block
+b)try-throw-catch
+9. Write a JavaScript program to use of AJAX.
+10. Write a JavaScript program to use of JQUERY.
+11. Write a program to show jQuery Selectors. -->

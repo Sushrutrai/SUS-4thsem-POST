@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+    <!-- 2. Input Limitations
+o Create a text input field that only accepts numeric input. 
+o Use JavaScript to prevent non-numeric characters from being entered.-->
+    <div>
+        <label for="">ID.no:<input type="text" id="ids"></label>
+    </div>
+    <p id="err"></p>
+    <script>
+    
+        // document.getElementById('button').addEventListener('click',()=>{
+        //     let input=document.getElementById('ids').value
+        let err=document.getElementById('err')
+        let pattern=/^[\d]+$/
+        //     if(!pattern.test(input)){
+        //         err.innerText='Id can only be numeric'
+        //         err.style.color='red'
+        //         return 
+        //     }else{
+        //         err.innerText='Success'
+        //         err.style.color='green'
+        //     }
+        // })
+        document.getElementById('ids').addEventListener('keypress',(e)=>{
+            if(!/\d/.test(e.key)){
+                e.preventDefault()
+                err.innerText='only numeric characters'
+            }else{
+                err.innerText=''
+            }
+        })
+
+    </script>
+</body>
+</html>

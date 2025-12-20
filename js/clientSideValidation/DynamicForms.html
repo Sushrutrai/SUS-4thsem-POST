@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload=" createForm()" style="display: flex;justify-content: center;align-items: center;">
+    <!-- 5. Write HTML Script for creating a form containing text box for username, password field
+for password, and checkbox for Education fields. Write a JavaScript function for the
+validation of the form for all of the fields as required. In addition length of username
+should at least 4, the password should start with digit and end with $.-->
+<script>
+    function validate(){
+        const usernameL=document.getElementById('username').value.length;
+        if(usernameL<4 || usernameL==0){
+            alert('username must be at least 4 characters')
+            return false
+        }
+        const pass=document.getElementById('password').value;
+        let pattern=/^\d.*\$$/;
+        if(!pattern.test(pass)){
+            alert('password format not correct')
+            return false
+        }else{
+            alert('Form submission success')
+            return true
+        }
+    }
+
+
+    function createLabelwInput(labelName,type,placeholder){
+        let label=document.createElement('label')
+            label.innerText=labelName
+            label.htmlFor=labelName
+            label.style.padding='.5rem'
+        let input=document.createElement('input')
+            input.type=type
+            input.id=labelName
+            input.name=labelName
+            input.placeholder=placeholder
+            input.autocomplete=true
+            if(type==='checkbox')input.value=labelName;
+            label.appendChild(input)
+        return label
+    }
+  
+    
+    function createForm(){
+        const form=document.createElement('form')
+        document.body.appendChild(form) 
+            form.style.display='flex'
+            form.style.flexDirection='column'
+            form.appendChild(createLabelwInput("username","text",''))
+            form.appendChild(createLabelwInput("password","password",'eg.1****$'))
+            form.appendChild(createLabelwInput("Java","checkbox"))
+            form.appendChild(createLabelwInput("C","checkbox"))
+            form.appendChild(createLabelwInput("C++","checkbox"))
+            form.appendChild(
+                Object.assign(document.createElement('button'),{            //created using Object.assign to set properties of the element whilst creating the element
+                    type:'submit',
+                    id:'button',
+                    innerText:'Submit',
+                    style:'display:block;',
+                    onclick:(e)=>{ 
+                        e.preventDefault()
+                        validate()}
+                })
+            )
+        }
+
+</script>
+</body>
+</html>

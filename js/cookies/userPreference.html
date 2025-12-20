@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+            flex-direction:column;
+        }
+        svg{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 2. User Preferences
+o Create a system that allows users to customize the look and feel of your site.
+o When the user selects their preferences, store them in a cookie.
+o On subsequent visits, apply the user’s preferences by reading from the cookie.
+o Allow the user to update their preferences at any time, and reflect these changes in the cookie.
+o Provide an option for the user to reset their preferences, which deletes the cookie.
+ Write a JavaScript program to Create a Cookie.
+ Write a JavaScript program to Read a Cookie.
+ Write a JavaScript program to Change a Cookie.
+ Write a JavaScript program to Delete a Cookie. -->
+    <div>
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" >
+            <path id="theme" d="M11 16C9.61667 16 8.43767 15.5123 7.463 14.537C6.48833 13.5617 6.00067 12.3827 6 11C5.99933 9.61733 6.487 8.43833 7.463 7.463C8.439 6.48767 9.618 6 11 6C12.382 6 13.5613 6.48767 14.538 7.463C15.5147 8.43833 16.002 9.61733 16 11C15.998 12.3827 15.5103 13.562 14.537 14.538C13.5637 15.514 12.3847 16.0013 11 16ZM4 12H0V10H4V12ZM22 12H18V10H22V12ZM10 4V0H12V4H10ZM10 22V18H12V22H10ZM5.4 6.75L2.875 4.325L4.3 2.85L6.7 5.35L5.4 6.75ZM17.7 19.15L15.275 16.625L16.6 15.25L19.125 17.675L17.7 19.15ZM15.25 5.4L17.675 2.875L19.15 4.3L16.65 6.7L15.25 5.4ZM2.85 17.7L5.375 15.275L6.75 16.6L4.325 19.125L2.85 17.7Z" fill="black"/>
+        </svg>
+        <h1>This is a heading</h1>
+        <select name="font-sizing" class="font-sizing" title='size'>
+            <option value="small" id="small">Small</option>
+            <option value="medium" id="medium" selected>Medium</option>
+            <option value="large" id="large">Large</option>
+        </select>
+        <button type="reset" id="reset">Reset</button>
+    </div>
+    <script>
+
+        
+        function setCookie(type,preference){
+            document.cookie=`${type}=${encodeURIComponent(preference)}; expires=Thu, 18 May 2026 12:00:00 UTC; path=/`
+        }
+
+        function getCookie(name){
+            const cookie=document.cookie.split(';')
+            for(const c of cookie){
+                const[key,value]=c.split('=')
+                if(key.trim()===name)return decodeURIComponent(value)
+            }
+            return null
+        }
+
+        const theme=document.getElementById('theme')
+        let active=false
+
+        function applyTheme(isDark){
+            theme.style.fill=isDark?'white':'black'        
+            document.body.style.backgroundColor=isDark?'black':'white'
+            document.body.style.color=isDark?'white':'black'
+            active=isDark
+
+        }
+        theme.addEventListener('click',()=>{
+            const isDark=!active
+            applyTheme(isDark)
+            setCookie('theme',isDark?'dark':'light')
+           
+        })
+
+        const font={
+            small:'.5rem',
+            medium:'1rem',
+            large:'2rem'
+
+        }
+        const select=document.querySelector('.font-sizing')
+            select.addEventListener('change',()=>{
+                console.log('event logged'+font[select.value])
+                const size=select.value
+                if(!font[size])return
+                document.body.style.fontSize=font[size]
+
+                setCookie('fontsize',size,)
+            })
+
+        window.addEventListener('DOMContentLoaded',()=>{
+            const savedTheme=getCookie('theme')
+            const savedFontSize=getCookie('fontsize')
+
+            if(savedTheme==='dark') applyTheme(true);
+            else applyTheme(false);
+            if(font[savedFontSize]){
+                document.body.style.fontSize=font[savedFontSize]
+                select.value=savedFontSize
+            }
+        })
+
+        function deleteCookie(type){
+              document.cookie=`${type}=; expires=Thu, 18 May 1999 12:00:00 UTC; path=/`
+        }
+            document.getElementById('reset').addEventListener('click',()=>{
+                deleteCookie('theme')
+                deleteCookie('fontsize')
+                location.reload()
+            })
+
+    </script>
+</body>
+</html>

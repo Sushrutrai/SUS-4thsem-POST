@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body   onload="checkCookieStatus()" >
+    <!-- 1. User Session
+o Create a system that remembers a user’s name across multiple visits to your site.
+o When the user visits for the first time, prompt them for their name and store it in a cookie.
+o On subsequent visits, display a personalized greeting message using the name stored in the cookie. -->
+    <script>  
+        function setCookie(user){
+                document.cookie="username="+user+"; expires=Thu, 18 Jan 2026 12:00:00 UTC; path=/"
+        }
+        
+        function getCookie(name){
+            const cookie=document.cookie.split(';')
+            for(const c of cookie){
+                const[key,value]=c.split('=')
+                if(key.trim()===name)return decodeURIComponent(value)
+            }
+            return null
+        }
+        
+        function checkCookieStatus(){
+            let user=getCookie('username')
+            if(user!=='' && user!==null){
+                alert(`Welcome ${user}`)
+            }
+            else{
+                user=prompt('Enter your name:')
+                if(user!==null && user!==''){
+                    setCookie(user)
+                }
+            }
+        }
+        console.log(document.cookie)
+    </script>
+</body>
+</html>
